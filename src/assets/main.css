@@ -1,0 +1,21 @@
+@font-face{
+    font-family: "Justice Out";
+    src: url("src/assets/fonts/justiceout.ttf");
+}
+@font-face{
+    font-family: "Retro Computer";
+    src: url("src/assets/fonts/retro_computer.ttf");
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+#app{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    width: 100%;
+}
