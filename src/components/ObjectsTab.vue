@@ -35,7 +35,7 @@ export default {
           <SpriteView :sprite="sprites[object.sprite_id]" style="width: 50px; height: 50px;"
                       @click="this.$emit('changesprite', object.sprite_id)"/>
         </td>
-        <td class="table-align-center" v-else><img style="image-rendering: pixelated" src="/src/assets/images/noSprite.png"></td>
+        <td class="table-align-center" v-else><img style="image-rendering: pixelated" :src="'./images/noSprite.png'"></td>
         <td>{{ object.name }}</td>
         <td class="table-align-center">{{ object.id }}</td>
         <td class="table-align-center" v-if="object.sprite_id !== -1"

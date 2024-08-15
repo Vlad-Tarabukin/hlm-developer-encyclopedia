@@ -64,9 +64,9 @@ export default {
 
 <template>
   <div class="sprite-view" v-if="this.imageSource!= null">
-    <img class="center" src="../assets/images/centerMarker.png" :style="centerStyle()" v-if="this.showCenter"/>
+    <img class="center" :src="'./images/centerMarker.png'" :style="centerStyle()" v-if="this.showCenter"/>
     <div class="mask" :style="maskStyle()" v-if="this.showMask"/>
-    <img class="sprite" :src="'src/assets/images/sprites/' + imageSource + '/' + name + '/' + currentFrame + '.png'">
+    <img class="sprite" :src="'images/sprites/' + imageSource + '/' + name + '/' + currentFrame + '.png'">
   </div>
 </template>
 
