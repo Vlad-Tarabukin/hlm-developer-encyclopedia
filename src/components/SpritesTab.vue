@@ -2,6 +2,7 @@
 import spritesJson from "@/assets/info/sprites.json"
 import SpriteView from "@/components/SpriteView.vue";
 import SpriteInformationSidebar from "@/components/SpriteInformationSidebar.vue";
+
 export default {
   components: {SpriteInformationSidebar, SpriteView},
   emits: ["changesprite"],
@@ -37,19 +38,22 @@ export default {
         <th>Height</th>
       </tr>
       <tr v-for="(sprite, key) in sprites">
-        <td><SpriteView :sprite="sprites[key]" style="width: 50px; height: 50px;" @click="this.$emit('changesprite', key)"/></td>
-        <td>{{sprite.name}}</td>
-        <td class="table-align-center">{{sprite.id}}</td>
-        <td>Atlases/{{sprite.imageSource}}</td>
-        <td class="table-align-center">{{sprite.frames}}</td>
-        <td class="table-align-center">{{sprite.size.x}}</td>
-        <td class="table-align-center">{{sprite.size.y}}</td>
-        <td class="table-align-center">{{sprite.center.x}}</td>
-        <td class="table-align-center">{{sprite.center.y}}</td>
-        <td class="table-align-center">{{sprite.mask.x}}</td>
-        <td class="table-align-center">{{sprite.mask.y}}</td>
-        <td class="table-align-center">{{sprite.mask.size_x}}</td>
-        <td class="table-align-center">{{sprite.mask.size_y}}</td>
+        <td>
+          <SpriteView :sprite="sprites[key]" style="width: 30px; height: 30px;"
+                      @click="this.$emit('changesprite', key)"/>
+        </td>
+        <td>{{ sprite.name }}</td>
+        <td class="table-align-center">{{ sprite.id }}</td>
+        <td style="width: 10px;">Atlases/{{ sprite.imageSource }}</td>
+        <td class="table-align-center">{{ sprite.frames }}</td>
+        <td class="table-align-center">{{ sprite.size.x }}</td>
+        <td class="table-align-center">{{ sprite.size.y }}</td>
+        <td class="table-align-center">{{ sprite.center.x }}</td>
+        <td class="table-align-center">{{ sprite.center.y }}</td>
+        <td class="table-align-center">{{ sprite.mask.x }}</td>
+        <td class="table-align-center">{{ sprite.mask.y }}</td>
+        <td class="table-align-center">{{ sprite.mask.size_x }}</td>
+        <td class="table-align-center">{{ sprite.mask.size_y }}</td>
       </tr>
     </table>
   </div>
@@ -57,27 +61,30 @@ export default {
 
 <style scoped>
 .tab-table {
-  font-size: 20px;
+  font-size: 16px;
   font-family: monospace;
-  overflow: scroll;
-  height: 100%;
 }
+
 .table-hint {
   position: sticky;
   font-weight: bold;
   background: white;
 }
+
 .table-hint.first-row {
   top: 0;
   height: 25px;
 }
+
 .table-hint.second-row {
   top: 25px;
   height: 35px;
 }
+
 .table-hint th {
-  padding: 0 25px 0 25px;
+  padding: 0 5px 0 5px;
 }
+
 .table-align-center {
   text-align: center;
 }

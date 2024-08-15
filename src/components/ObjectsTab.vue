@@ -32,7 +32,7 @@ export default {
       </tr>
       <tr class="table-data" v-for="object in objects">
         <td v-if="object.sprite_id !== -1">
-          <SpriteView :sprite="sprites[object.sprite_id]" style="width: 50px; height: 50px;"
+          <SpriteView :sprite="sprites[object.sprite_id]" style="width: 30px; height: 30px;"
                       @click="this.$emit('changesprite', object.sprite_id)"/>
         </td>
         <td class="table-align-center" v-else><img style="image-rendering: pixelated" :src="'./images/noSprite.png'"></td>
@@ -62,7 +62,7 @@ export default {
 
 <style scoped>
 .tab-table {
-  font-size: 20px;
+  font-size: 16px;
   font-family: monospace;
   overflow: scroll;
   height: 100%;
@@ -85,6 +85,6 @@ export default {
 }
 
 .table-data {
-  height: 105px;
+  height: 80px;
 }
 </style>

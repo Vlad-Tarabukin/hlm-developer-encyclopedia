@@ -25,7 +25,7 @@ export default {
 <template>
   <div class="sprite-information-sidebar" v-show="sprite != null">
     <h1 class="sprite-information-sidebar-title">Sprite information</h1>
-    <SpriteView ref="spriteView" style="width: 500px; height: 500px"/>
+    <SpriteView ref="spriteView" style="width: 300px; height: 300px"/>
     <div class="frame-select" v-if="sprite != null && sprite.frames > 1">
       <input class="frame-slider" type="range" min="0" :max="sprite.frames - 1" :value="currentFrame"
              @input="changeFrame($event.target.value)">
@@ -62,7 +62,7 @@ export default {
 .sprite-information-sidebar {
   position: sticky;
   top: 0;
-  width: 550px;
+  width: 450px;
   border-left: lightgray solid 1px;
   display: flex;
   flex-flow: column;
@@ -72,7 +72,7 @@ export default {
 .sprite-information-sidebar-title {
   margin-bottom: 0;
   font-family: Retro Computer, monospace;
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .frame-select {
@@ -92,17 +92,17 @@ export default {
 }
 
 .information-section {
-  width: 450px;
+  width: 350px;
 }
 
 .information-label {
   word-break: break-all;
   white-space: normal;
   font-family: monospace;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .information-label strong {
-  font-size: 26px;
+  font-size: 18px;
 }
 </style>

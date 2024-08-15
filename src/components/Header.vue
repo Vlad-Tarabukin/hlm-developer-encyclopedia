@@ -38,8 +38,8 @@ header {
   padding: 20px 0 10px 20px;
   color: #fffa00;
   font-family: Justice Out, monospace;
-  font-size: 64px;
-  text-shadow: 3px 3px #c58d00;
+  font-size: 40px;
+  text-shadow: 2px 2px #c58d00;
   letter-spacing: 6px;
 }
 
